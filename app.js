@@ -5,6 +5,11 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 
+//telling that we use the pug templating
+app.set('view engine', 'pug')
+//where to find those files for templating
+app.set('views', 'views')
+
 const adminRoutes = require('./routes/admin')
 const shopRoutes = require('./routes/shop')
 
