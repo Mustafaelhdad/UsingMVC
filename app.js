@@ -30,7 +30,7 @@ app.use(adminRoutes.routes)
 app.use(shopRoutes)
 
 app.use((req, res, next) => {
-  res.status(404).render('404', { pageTitle: "Not Found Page!!" })
+  res.status(404).render('404', { pageTitle: "Not Found Page!!", path: '/notfound' })
 })
 
 app.listen(3000)
