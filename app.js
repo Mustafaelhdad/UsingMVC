@@ -20,7 +20,7 @@ app.use(adminRoutes.routes)
 app.use(shopRoutes)
 
 app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, 'views', 'not-found.html'))
+  res.status(404).render('404', { pageTitle: "Not Found Page!!" })
 })
 
 app.listen(3000)
