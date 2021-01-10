@@ -5,15 +5,15 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 // calling handlebars templating engine
-const expressHbs = require('express-handlebars')
+// const expressHbs = require('express-handlebars')
 
 //using the engine of the handlebars
-app.engine('hbs', expressHbs({
-  extname: '.hbs',
-  defaultLayout: 'main',
-}))
+// app.engine('hbs', expressHbs({
+//   extname: '.hbs',
+//   defaultLayout: 'main',
+// }))
 //telling that we use the pug templating
-app.set('view engine', 'hbs')
+app.set('view engine', 'ejs')
 //telling that we use the handlebars templating
 // app.set('view engine', 'pug')
 //where to find those files for templating
